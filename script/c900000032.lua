@@ -80,7 +80,7 @@ function s.ermop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.Remove(tc,POS_FACEUP,REASON_EFFECT)
 end
 function s.rmcfilter(c,tp)
-	return c:IsControler(tp) and c:IsFaceup() and c:IsSetCard(0xF9F) and c:IsPreviousControler(tp)
+	return c:IsControler(tp) and c:IsFaceup() and c:IsSetCard(0x1908) and c:IsPreviousControler(tp)
 end
 function s.rmcon(e,tp,eg,ep,ev,re,r,rp)
 	return eg and eg:IsExists(s.rmcfilter,1,e:GetHandler(),tp)
