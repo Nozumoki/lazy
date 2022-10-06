@@ -32,7 +32,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 s.xyz_number=39
-s.listed_series={0x107e}
+s.listed_series={0x406,48}
 function s.efilter(e,te)
 	return te:GetOwner()~=e:GetOwner()
 end
