@@ -56,7 +56,8 @@ function s.rmfilter(c)
 	return c:IsFaceup() and c:IsSetCard(0x1908) and c:IsAbleToRemove()
 end
 function s.thcon(e,tp,eg,ep,ev,re,r,rp)
-	return Duel.GetTurnPlayer()==tp and 
+	return Duel.GetTurnPlayer()==tp
+end
 function s.thfilter(c)
 	return c:IsSetCard(0x1908) and c:IsMonster() and not c:IsCode(id) and c:IsAbleToHand()
 end
