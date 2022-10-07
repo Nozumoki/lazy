@@ -21,6 +21,7 @@ function s.initial_effect(c)
 	e2:SetProperty(EFFECT_FLAG_CARD_TARGET)
 	e2:SetRange(LOCATION_MZONE)
 	e2:SetCountLimit(1,{id,1})
+	e2:SetCondition(s.thcon)
 	e2:SetTarget(s.thtg)
 	e2:SetOperation(s.thop)
 	c:RegisterEffect(e2)
@@ -54,6 +55,8 @@ end
 function s.rmfilter(c)
 	return c:IsFaceup() and c:IsSetCard(0x1908) and c:IsAbleToRemove()
 end
+function s.thcon(e,tp,eg,ep,ev,re,r,rp)
+	return Duel.GetTurnPlayer()==tp and 
 function s.thfilter(c)
 	return c:IsSetCard(0x1908) and c:IsMonster() and not c:IsCode(id) and c:IsAbleToHand()
 end
